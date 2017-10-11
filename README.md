@@ -14,7 +14,10 @@
 
 * Models: Users (Authentication with full name, email, password),
 
-* Gravatar feature added 
+* Gravatar feature added
+
+* Gemfile:
+  - gem 'toastr-rails' (To make the notification appear nice)
 -------------------------------------------
 
 Please visit the website:

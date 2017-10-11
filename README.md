@@ -2,9 +2,9 @@
 
 ## By Amanda Sam
 
-Framework of the project: Ruby on Rails
+### Framework of the project: Ruby on Rails
 
-The project also involves: JavaScript, jQuery and Bootstrap
+### The project also involves: JavaScript, jQuery and Bootstrap
 
 * Ruby version: 2.4.0
 

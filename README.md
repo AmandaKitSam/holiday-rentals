@@ -12,7 +12,7 @@
 
 * Database: PostgreSQL
 
-* Models: Users,
+* Models: Users (Authentication with full name),
 
 -------------------------------------------
 

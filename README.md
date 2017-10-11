@@ -1,24 +1,20 @@
-# README
+# PROJECT - Holiday Rentals
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## By Amanda Sam
 
-Things you may want to cover:
+Framework of the project: Ruby on Rails
 
-* Ruby version
+The project also involves: JavaScript, jQuery and Bootstrap
 
-* System dependencies
+* Ruby version: 2.4.0
 
-* Configuration
+* Rails version: 5.1.4
 
-* Database creation
+* Database: PostgreSQL
 
-* Database initialization
+* Models: Users,
 
-* How to run the test suite
+-------------------------------------------
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Please visit the website:
+(Project is at the working stage)

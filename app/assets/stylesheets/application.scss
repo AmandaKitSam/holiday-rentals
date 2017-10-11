@@ -15,6 +15,7 @@ body {
 
 a {
   color: #ee785a;
+  // orange
 }
 
 .container {
@@ -22,12 +23,14 @@ a {
 }
 
 .text-babu, .icon-babu {
-  color: #00A699;
+  color: #ee785a;
+  // color: #e35d6a;
+  // pink
 }
 
 /* ------------- avatar images ------------- */
 .avatar_small {
-  width: 32px;
+  width: 36px;
 }
 
 .avatar_medium {
@@ -40,4 +43,70 @@ a {
 
 .avatar_full {
   width: 100%;
+}
+
+/* ------------- buttons ------------- */
+.btn-block {
+  display: block;
+  white-space: normal;
+  width: 100%;
+}
+
+.btn {
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 9px 27px;
+}
+
+.btn-small {
+  padding: 5px 15px;
+  margin-top: 15px;
+}
+
+.btn:hover, .btn:focus {
+  color: #fff;
+}
+
+.btn.btn-default {
+  width: 100%;
+  border-color: #c4c4c4;
+  background: white;
+  color: #484848;
+  border-radius: 2px;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.btn.btn-normal {
+  border: 1px solid #ee785a;
+  background-color: #ee785a;
+}
+
+.btn.btn-normal:hover {
+  outline: none;
+  border-color: #ff4300;
+  background-color: #ff4300;
+}
+
+.btn.btn-form {
+  border: 1px solid #00A699;
+  background-color: #00A699;
+}
+
+.btn.btn-form:active {
+  outline: none;
+  border-color: #066165;
+  background-color: #066165;
+}
+
+/* ------------- nav bar ------------- */
+.navbar-default {
+  background-color: #FFFFFF;
+}
+
+.navbar-default .navbar-brand {
+  color: #ee785a;
+  font-size: 2em;
+  font-weight: 500;
 }

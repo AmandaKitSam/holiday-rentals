@@ -12,8 +12,9 @@
 
 * Database: PostgreSQL
 
-* Models: Users (Authentication with full name),
+* Models: Users (Authentication with full name, email, password),
 
+* Gravatar feature added 
 -------------------------------------------
 
 Please visit the website:

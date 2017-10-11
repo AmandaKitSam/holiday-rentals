@@ -1,3 +1,21 @@
-// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+/* "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables" */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+/* ------------- avatar images ------------- */
+.avatar_small {
+  width: 32px;
+}
+
+.avatar_medium {
+  width: 48px;
+}
+
+.avatar_large {
+  width: 68px;
+}
+
+.avatar_full {
+  width: 100%;
+}

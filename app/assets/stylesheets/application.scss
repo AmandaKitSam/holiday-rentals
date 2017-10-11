@@ -110,3 +110,35 @@ a {
   font-size: 2em;
   font-weight: 500;
 }
+
+
+/* ------------- panels ------------- */
+.panel-default .panel-heading {
+  color: #ffffff;
+  background-color: #ee785a;
+  font-family: 'Neuton', serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.row-space-1 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.row-space-2 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.row-space-3 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.description {
+  color: #575757;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+}

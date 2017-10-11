@@ -21,4 +21,6 @@
 -------------------------------------------
 
 Please visit the website:
-(Project is at the working stage)
+https://holiday-rentals.herokuapp.com/
+
+- (Project is at the working stage)

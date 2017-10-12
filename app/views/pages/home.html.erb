@@ -1,8 +1,40 @@
-<h1>Home Page</h1>
+<div class="row">
+  <div class="col-md-5 banner">
+    <h1>Find your ideal accommodation for your next trip...</h1>
+  </div>
+</div>
 
-<h4>Day or night, we’re here for you. Talk to our support team from anywhere in the world, any hour of day.</h4>
-<h4>Guests review their hosts after each stay. All hosts must maintain a minimum rating and our hospitality standards to be on Holiday Rentals.</h4>
-<h4>From fresh-pressed sheets to tips on where to get the best brunch, our hosts are full of local hospitality.</h4>
-<h4>Day or night, we’re here for you. Talk to our support team from anywhere in the world, any hour of day.</h4>
-<h4>Guests review their hosts after each stay. All hosts must maintain a minimum rating and our hospitality standards to be on Holiday Rentals.</h4>
-<h4>From fresh-pressed sheets to tips on where to get the best brunch, our hosts are full of local hospitality.</h4>
+
+  <div class="row">
+    <div class="col-md-6">
+      <%= text_field_tag :search, params[:search], placeholder: "Where are you going?", class: "form-control", id: "autolocation" %>
+    </div>
+    <div class="col-md-3">
+      <%= text_field_tag :start_date, params[:start_date], placeholder: "Start Date", class: "form-control datepicker" %>
+    </div>
+    <div class="col-md-3">
+      <%= text_field_tag :end_date, params[:end_date], placeholder: "End Date", class: "form-control datepicker" %>
+    </div>
+  </div>
+  <br/><br/>
+
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <%= submit_tag "Search", class: "btn btn-normal btn-block" %>
+    </div>
+  </div>
+
+
+<br/><hr/><br/>
+
+
+  <!-- I want to add a photo from this point -->
+
+<!-- HOMES -->
+<div><h3>Homes</h3></div>
+<br/>
+
+
+<!-- CITIES -->
+<div><h3>Cities</h3></div>
+<br/>

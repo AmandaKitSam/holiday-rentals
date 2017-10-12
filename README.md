@@ -12,7 +12,7 @@
 
 * Database: PostgreSQL
 
-* Models: Users (Authentication with full name, email, password), Rooms, 
+* Models: Users (Authentication with full name, email, password), Rooms,
 
 * Gravatar feature added
 

@@ -6,17 +6,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-    <!-- tem links -->
-    <%= link_to 'New Room', new_room_path %>
-    <!-- tem links end -->
 
     <%= render 'shared/navbar' %>
     <%= render 'shared/message' %>
 
     <div class="container">
+      <!-- tem links -->
+      <%= link_to 'Create Room', new_room_path %>
+      <!-- tem links end -->
+
       <%= yield %>
     </div>
 

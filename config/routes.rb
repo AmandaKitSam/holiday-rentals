@@ -13,4 +13,5 @@ Rails.application.routes.draw do
       get 'amenities'
       get 'location'
     end
+  end
 end

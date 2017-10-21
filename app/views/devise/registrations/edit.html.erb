@@ -4,7 +4,7 @@
       <li class="sidebar-item"><%= link_to "Edit Profile", edit_user_registration_path, class: "sidebar-link active" %></li>
     </ul>
     <br/>
-    <%= link_to "View My Profile", user_path(current_user.id), class: "btn btn-default" %>
+    <%= link_to "View My Profile", user_path(current_user.id), class: "btn btn-normal" %>
   </div>
 
   <div class="col-md-9 text-center">
@@ -38,7 +38,6 @@
             <div class="form-group">
               <%= f.password_field :current_password, autocomplete: "off", placeholder: "Current Password", class: "form-control" %>
             </div>
-
 
             <div class="form-group">
               <%= f.password_field :password, autocomplete: "off", placeholder: "New Password", class: "form-control" %>

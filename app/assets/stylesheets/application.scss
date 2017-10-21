@@ -163,6 +163,35 @@ a {
   color: #403e3e;
 }
 
+/* ------------- sidebar - Edit User Profile ------------- */
+.sidebar-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.sidebar-item {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #82888a;
+}
+
+.sidebar-link {
+  color: #ff6200;
+  text-decoration: none;
+}
+
+.sidebar-link:hover, .sidebar-link:focus {
+  color: #B04400;
+  text-decoration: none;
+}
+
+.active.sidebar-link {
+  color: #ff6200;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
 /* ------------- nav bar ------------- */
 .navbar-default {
   background-color: #FFFFFF;

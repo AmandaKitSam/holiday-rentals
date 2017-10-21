@@ -45,7 +45,8 @@ class RoomsController < ApplicationController
   end
 
   def update
-    if @room.update(new_params)
+    # if @room.update(new_params)
+    if @room.update room_params
       flash[:notice] = "Saved..."
     else
       flash[:alert] = "Something went wrong..."

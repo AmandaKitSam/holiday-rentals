@@ -132,13 +132,13 @@ a {
 }
 
 .select:before {
-  content: '\25bc';
+  content: '\25bc'; /* Black down-pointing triangle */
   font-size: 1.2em;
   position: absolute;
   color: #403e3e;
   top: 35px;
   right: 30px;
-  transform: scale(0.94, 0.62);
+  transform: scale(0.94, 0.62); /* change triangle */
 }
 
 .form-group input[type="checkbox"] {
@@ -150,12 +150,12 @@ a {
   border: 1px solid #403e3e;
   border-radius: 2px;
   appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari & Chrome */
 }
 
 .form-group input[type="checkbox"]:checked:before {
-  content: '\2713';
+  content: '\2713'; /* Display as a check */
   position: absolute;
   font-size: 0.95em;
   text-align: center;

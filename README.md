@@ -20,7 +20,7 @@
 
 ## About the Project:
 
-* Find your ideal accommodation for your next trip...
+- Find your ideal accommodation for your next trip ...
 
 - Users can sign up and create their User Profile page on the website.
 

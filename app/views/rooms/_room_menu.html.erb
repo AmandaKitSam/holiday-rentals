@@ -2,6 +2,7 @@
  <li class="sidebar-item">
    <%= link_to "Listing", listing_room_path, class: "sidebar-link active" %>
    <span class="pull-right text-babu"><i class="fa fa-check"></i></span>
+   <!-- check mark -->
  </li>
 
  <li class="sidebar-item">
@@ -20,6 +21,9 @@
 
  <li class="sidebar-item">
    <%= link_to "Photos", photo_upload_room_path, class: "sidebar-link active" %>
+   <% if !@room.photos.blank? %>
+     <span class="pull-right text-babu"><i class="fa fa-check"></i></span>
+   <% end %>
  </li>
 
  <li class="sidebar-item">
@@ -33,8 +37,8 @@
      <span class="pull-right text-babu"><i class="fa fa-check"></i></span>
    <% end %>
  </li>
-
 </ul>
+
 <hr/>
 
 <% is_ready = !@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? %>

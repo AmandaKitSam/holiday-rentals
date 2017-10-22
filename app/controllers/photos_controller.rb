@@ -7,10 +7,10 @@ class PhotosController < ApplicationController
       params[:images].each do |img|
         @room.photos.create(image: img)
       end
-
-      @photos = @room.photos
-      redirect_back(fallback_location: request.referer, notice: "Saved...")
     end
+
+    @photos = @room.photos
+    redirect_back(fallback_location: request.referer, notice: "Saved...")
   end
 
   def destroy

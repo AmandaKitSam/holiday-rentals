@@ -45,6 +45,9 @@ class RoomsController < ApplicationController
   end
 
   def update
+    new_params = room_params                                      # If room is not nil, room_params
+    new_params = room_params.merge(active: true) if is_ready_room # If the room is active(ready status),then merge the active attribute to the rooms param with the value of true and pass the new params into the room_params below (Add security to the room Publish button)
+
     # if @room.update(new_params)
     if @room.update room_params
       flash[:notice] = "Saved..."
@@ -63,6 +66,10 @@ class RoomsController < ApplicationController
     redirect_to root_path, alert: "You don't have permission" unless current_user.id == @room.user_id
   end
   # if the user didn't created the room, they don't have the permission to update - before_action :is_authorised
+
+  def is_ready_room
+    !@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank?
+  end
 
   def room_params
     params.require(:room).permit(:home_type, :room_type, :accommodate, :bed_room, :bath_room, :listing_name, :summary, :address, :is_tv, :is_kitchen, :is_air, :is_heating, :is_internet, :price, :active)

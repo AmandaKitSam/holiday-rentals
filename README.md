@@ -4,7 +4,7 @@
 
 ### Framework of the project: Ruby on Rails
 
-### The project also involves: JavaScript, jQuery, SCSS and Bootstrap
+### The project also involves: JavaScript, AJAX, jQuery, SCSS, Bootstrap and Google Map API
 
 * Ruby version: 2.4.0
 

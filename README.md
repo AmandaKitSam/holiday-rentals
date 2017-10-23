@@ -12,21 +12,23 @@
 
 * Database: PostgreSQL
 
+* API: Google Map API
+
 * Gravatar feature added
 
 * Gemfile: gem 'toastr-rails' (To make the notification appear nice)
 
 ## About the Project:
 
-- Find your ideal accommodation for your next trip ...
+- Find your ideal accommodation for your next trip:
 
 - Users can sign up and create their User Profile page on the website.
 
-- User's photo is connect with Gravatar. If the user has uploaded photo with Gravatar, then the photo will appear at the nav bar next to user's name and email. (Otherwise, it will appear as numbers.)
+- User's photo is connect with Gravatar. If the user has uploaded photo with Gravatar, user's photo will automatically appear at the nav bar next to user's name and email after user has logged in. (Otherwise, it will appear as numbers.)
 
-- After users have sign up for the website, they can create rooms at 'Holiday Rentals' and add photos/details for their rooms.
+- Users can create rooms at 'Holiday Rentals' within their accounts, and they can add photos, listing details, price(per/night), description, amenities & location for their rooms.
 
-- Once the room is ready for rent and published, other users can search for the room and make reservations. (It's a mock up school project of holiday rentals websites.)
+- Once the room is ready for rent, other users can search for the room and make reservations. (It's a mock up school project of holiday rentals websites.)
 
 ## Models:
 

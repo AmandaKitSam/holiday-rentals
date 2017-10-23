@@ -1,1 +1,54 @@
-<h1>Show the Room</h1>
+<!-- In Rooms Show Page: Cover Photo -->
+<div class="row">
+  <div class="col-md-12">
+    <%= image_tag @room.cover_photo(nil), width: "100%" %>
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <!-- Left Panel -->
+  <div class="col-md-8">
+    <!-- Listing Name -->
+    <div class="row">
+      <div class="col-md-8">
+        <h1><%= @room.listing_name %></h1>
+        <%= @room.address %>
+      </div>
+      <div class="col-md-4 text-center">
+        <%= image_tag avatar_url(@room.user), class: "img-circle avatar_large" %><br/><br/>
+        <%= @room.user.fullname %>
+      </div>
+    </div>
+    <hr/>
+
+    <!-- Room Info -->
+    <div class="row">
+      Room Info
+    </div>
+    <hr/>
+
+    <!-- About the Room -->
+    <div class="row">
+      About the room
+    </div>
+    <hr/>
+
+    <!-- Amenities -->
+    <div class="row">
+      Amenities
+    </div>
+    <hr/>
+
+    <!-- Carousel - Photos -->
+    <div class="row">
+      photo
+    </div>
+    <hr/>
+  </div>
+
+  <!-- Right Panel -->
+  <div class="col-md-4">
+    <!-- Reservation Form -->
+  </div>
+</div>

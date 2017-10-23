@@ -32,7 +32,7 @@
 
 * Users - Authentication with full name, email, password; also added phone number, description and more
 
-* Rooms - List name, summary, address, price(per night) home type, room type, accommodate(integer), bed room(integer), bath room(integer); also added Amenities such as if the room includes TV / kitchen / internet and more
+* Rooms - Listing name, summary, address, price(per night), home type, room type, accommodate(integer), bed room(integer), bath room(integer); also added Amenities such as if the room includes TV / kitchen / internet and more
 
 * Photos - (Associated with Rooms) User can add photos for their rooms to promote their places
 
@@ -41,4 +41,4 @@
 Please visit the website:
 https://holiday-rentals.herokuapp.com/
 
-- (Project is at the working stage)
+--- Project is at the working stage ---

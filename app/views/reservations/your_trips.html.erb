@@ -17,7 +17,7 @@
         <% @trips.each do |trip| %>
           <div class="row">
             <div class="col-md-2">
-              <%= trip.start_date.strftime('%w') %>
+              <%= trip.start_date.strftime('%v') %>
             </div>
             <div class="col-md-2">
               <%= link_to room_path(trip.room) do %>
@@ -27,8 +27,7 @@
             <div class="col-md-8">
               <%= link_to trip.room.listing_name, room_path(trip.room) %>
               <span class="pull-right text-center">
-                From:
-                <%= image_tag avatar_url(trip.room.user), class: "img-circle avatar_medium" %>
+                <%= image_tag avatar_url(trip.room.user), class: "img-circle avatar_medium" %><br/>
                 <%= link_to user_path(trip.room.user) do %>
                   <%= trip.room.user.fullname %>
                 <% end %>

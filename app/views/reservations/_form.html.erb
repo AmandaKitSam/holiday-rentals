@@ -13,9 +13,12 @@
       <div class="col-md-6">
         <label>Check Out: </label>
         <%= f.text_field :end_date, readonly: true, placeholder: "End Date", class: "form-control datepicker", disabled: true %>
-        <!-- disabled the end until user selects start_date -->
+        <!-- disabled the end_date until user selects start_date -->
       </div>
     </div>
+
+    <!-- To Display the message showing user the range is not available -->
+    <h4 class="message-alert text-center"><span id="message"></span></h4>
 
     <div id="preview" style="display: none">
       <table class="reservation-table">
@@ -26,18 +29,18 @@
           </tr>
           <tr>
             <td>Night(s)</td>
-            <td class="text-right">x <span id="reservation_days"></span></td>
+            <td class="text-right">x <span id="reservation_nights"></span></td>
           </tr>
           <tr>
             <td class="total">Total</td>
-            <td class="text-right">$ <span id="reservation_total"></span></td>
+            <td class="text-right">$<span id="reservation_total"></span></td>
           </tr>
         </tbody>
       </table>
     </div>
 
       <br/>
-      <%= f.submit "Book Now", class: "btn btn-normal btn-block" %>
+      <%= f.submit "Book Now", id: "btn_book", class: "btn btn-normal btn-block", disabled: true %>
     <% end %>
   </div>
 </div>
@@ -74,8 +77,39 @@ function checkDate(date) {
           onSelect: function(selected) {
             $('#reservation_end_date').datepicker("option", "minDate", selected);
             $('#reservation_end_date').attr("disabled", false);
+
+            // --- Same as below within: reservation_end_date datapicker ---
+            var start_date = $('#reservation_start_date').datepicker('getDate');
+            var end_date = $('#reservation_end_date').datepicker('getDate');
+            var nights = (end_date - start_date)/1000/60/60/24 + 1;
+
+            var input = {
+              'start_date': start_date,
+              'end_date': end_date
+            }
+
+            $.ajax({
+              url: '<%= preview_room_path(@room) %>',
+              data: input,
+              success: function(data) {
+                if(data.conflict) {
+                  $('#message').text("Sorry, these dates are not available.");
+                  $('#preview').hide();
+                  $('#btn_book').attr('disabled', true);
+                } else {
+                  $('#message').text("");
+                  $('#preview').show();
+                  $('#btn_book').attr('disabled', false);
+
+                  var total = nights * <%= @room.price %>
+                  $('#reservation_nights').text(nights);
+                  $('#reservation_total').text(total);
+                }
+              }
+            }); // End ajax
           }
-        });
+        }); // End ('#reservation_start_date')
+
         $('#reservation_end_date').datepicker({
           dateFormat: 'dd-mm-yy',
           minDate: 0,
@@ -83,8 +117,40 @@ function checkDate(date) {
           beforeShowDay: checkDate,
           onSelect: function(selected) {
             $('#reservation_start_date').datepicker("option", "maxDate", selected);
+
+            // User selects the date
+            var start_date = $('#reservation_start_date').datepicker('getDate');
+            var end_date = $('#reservation_end_date').datepicker('getDate');
+            var nights = (end_date - start_date)/1000/60/60/24 + 1;
+            // 1000 mini-sec / 60 sec/ 60 min / 24 h
+
+            var input = {
+              'start_date': start_date,
+              'end_date': end_date
+            }
+
+            // AJAX runs the preview action from rooms_controller, pass data. If success - show output of def preview - Then return the output (from render json:)
+            $.ajax({
+              url: '<%= preview_room_path(@room) %>',
+              data: input,
+              success: function(data) {
+                if(data.conflict) {
+                  $('#message').text("Sorry, these dates are not available.");
+                  $('#preview').hide();
+                  $('#btn_book').attr('disabled', true);
+                } else {
+                  $('#message').text("");
+                  $('#preview').show();
+                  $('#btn_book').attr('disabled', false);
+
+                  var total = nights * <%= @room.price %>
+                  $('#reservation_nights').text(nights);
+                  $('#reservation_total').text(total);
+                }
+              }
+            }); // End ajax
           }
-        });
+        }); // End (#reservation_end_date)
       }
     });
 

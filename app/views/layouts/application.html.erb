@@ -16,9 +16,11 @@
     <%= render 'shared/message' %>
 
     <div class="container">
-      <!-- tem links -->
-      <%= link_to 'Create Room', new_room_path %>
-      <!-- tem links end -->
+
+      <!-- Tem Links Start -->
+      <%= link_to 'Create Room |', new_room_path %>
+      <%= link_to 'All Rooms', rooms_path %>
+      <!-- Tem Links End -->
 
       <%= yield %>
     </div>

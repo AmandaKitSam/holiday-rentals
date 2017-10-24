@@ -34,9 +34,11 @@
 
 * Users - Authentication with full name, email, password; also added phone number, description and more
 
-* Rooms - Listing name, summary, address, price(per night), home type, room type, accommodate(integer), bed room(integer), bath room(integer); also added Amenities such as if the room includes TV / kitchen / internet and more
+* Rooms (Associated with Users) - Listing name, summary, address, price(per night), home type, room type, accommodate(integer), bed room(integer), bath room(integer); also added Amenities such as if the room includes TV / kitchen / internet and more
 
-* Photos - (Associated with Rooms) User can add photos for their rooms to promote their places
+* Photos - (Associated with Rooms) User can add photos for their rooms to promote their places.
+
+* Reservations - (Associated with Rooms & Users) User A can create a room for rent. Other users can make reservation for the room.
 
 -------------------------------------------
 

@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-md-3">
+    <ul class="sidebar-list">
+      <li class="sidebar-item"><%= link_to "Your Listings", rooms_path, class: "sidebar-link" %></li>
+      <li class="sidebar-item"><%= link_to "Your Reservations", rooms_path, class: "sidebar-link" %></li>
+      <li class="sidebar-item"><%= link_to "Your Trips", your_trips_path, class: "sidebar-link active" %></li>
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Your Trips
+      </div>
+
+      <!-- From reservations_controller def your_trips - pass @trips -->
+      <div class="panel-body">
+        <% @trips.each do |trip| %>
+          <div class="row">
+            <div class="col-md-2">
+              <%= trip.start_date.strftime('%w') %>
+            </div>
+            <div class="col-md-2">
+              <%= link_to room_path(trip.room) do %>
+                <%= image_tag trip.room.cover_photo(:thumb) %>
+              <% end %>
+            </div>
+            <div class="col-md-8">
+              <%= link_to trip.room.listing_name, room_path(trip.room) %>
+              <span class="pull-right text-center">
+                From:
+                <%= image_tag avatar_url(trip.room.user), class: "img-circle avatar_medium" %>
+                <%= link_to user_path(trip.room.user) do %>
+                  <%= trip.room.user.fullname %>
+                <% end %>
+              </span>
+            </div>
+          </div>
+          <hr/>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>

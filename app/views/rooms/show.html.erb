@@ -160,18 +160,21 @@
     <div class="row">
       <h3>Near By Homes For Rent</h3>
       <!-- from geocoder - nearby 10 km -->
-      <% for room in @room.nearbys(10) %>
-        <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-heading preview">
-              <%= image_tag room.cover_photo(:medium) %>
-            </div>
-            <div class="panel-body">
-              <%= link_to room.listing_name, room %><br/>
-              (<%= room.distance.round(2) %> km away)
+      <%= nearbys = @room.nearbys(10) %>
+      <% unless nearbys.nil? %>
+        <% for room in nearbys %>
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-heading preview">
+                <%= image_tag room.cover_photo(:medium) %>
+              </div>
+              <div class="panel-body">
+                <%= link_to room.listing_name, room %><br/>
+                (<%= room.distance.round(2) %> km away)
+              </div>
             </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
 

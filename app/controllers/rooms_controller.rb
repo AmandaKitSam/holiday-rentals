@@ -58,6 +58,17 @@ class RoomsController < ApplicationController
     redirect_back(fallback_location: request.referer)
   end
 
+
+  # ----- For Reservations -----
+  def preload
+    today = Date.today
+    reservations = @room.reservations.where("start_date >= ? OR end_date >= ?", today, today)
+
+    render json: reservations
+  end
+  # ----- End Reservations -----
+
+
   private
   def set_room
     @room = Room.find(params[:id])

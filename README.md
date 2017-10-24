@@ -24,7 +24,7 @@
 
 - Users can sign up and create their User Profile page on the website.
 
-- User's photo is connect with Gravatar. If the user has uploaded photo with Gravatar, user's photo will automatically appear at the nav bar next to user's name and email after user has logged in. (Otherwise, it will appear as numbers.)
+- User's photo is connected with Gravatar. If the user has uploaded photo with Gravatar, user's photo will automatically appear at the nav bar next to user's name and email after user has logged in. (Otherwise, it will appear as numbers.)
 
 - Users can create rooms at 'Holiday Rentals' within their accounts, and they can add photos, listing details, price(per/night), description, amenities & location for their rooms.
 

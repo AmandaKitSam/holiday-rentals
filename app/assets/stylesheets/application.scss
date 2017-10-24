@@ -300,8 +300,32 @@ body, html {
 }
 
 
-/* -------------  ------------- */
+/* -------------- Reservation - Form -------------- */
+.reservation-table td {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #dce0e0;
+  padding: 10px;
+}
 
+.reservation-table .total td {
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+}
+
+.form-control.datepicker {
+  color: #ff6200;
+  background-color: white;
+  border: 1px solid #ff6200;
+  text-align: center;
+}
+
+// .message-alert {
+//   color: #d43242;
+//   font-size: 14px;
+//   padding-top: 10px;
+// }
 
 
 

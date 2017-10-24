@@ -5,3 +5,16 @@
   <br/>
   <%= f.submit "Book Now", class: "btn btn-normal btn-block" %>
 <% end %>
+
+
+<!-- jquery-ui/datepicker -->
+<script>
+  $(function() {
+    $('#reservation_start_date').datepicker({
+      dateFormat: 'dd-mm-yy'
+    });
+    $('#reservation_end_date').datepicker({
+      dateFormat: 'dd-mm-yy'
+    });
+  });
+</script>

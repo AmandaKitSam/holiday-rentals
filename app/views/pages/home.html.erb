@@ -1,10 +1,34 @@
+<!-- Homes -->
+<!-- <div><h3>Homes</h3></div> -->
+
 <div class="row">
-  <div class="col-md-5 banner">
+  <div class="col-md-12 banner">
     <h1>Find your ideal accommodation for your next trip...</h1>
+    <br/>
+    <p class="home-page-p">Discover entire homes and private rooms perfect for any trip.<br/>
+      From fresh-pressed sheets to tips on where to get the best brunch, our hosts are full of local hospitality.</p>
   </div>
 </div>
+<br/>
+
+<div class="row">
+  <% @rooms.each do |room| %>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading preview">
+          <%= image_tag room.cover_photo(:medium) %>
+        </div>
+        <div class="panel-body">
+          <%= link_to room.listing_name, room %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<br/><hr/><br/>
 
 
+<%= form_for root_path, method: :get do %>
   <div class="row">
     <div class="col-md-6">
       <%= text_field_tag :search, params[:search], placeholder: "Where are you going?", class: "form-control", id: "autolocation" %>
@@ -23,6 +47,29 @@
       <%= submit_tag "Search", class: "btn btn-normal btn-block" %>
     </div>
   </div>
+<% end %>
+
+
+<script>
+  $('#start_date').datepicker({
+    dateFormat: 'dd-mm-yy',
+    minDate: 0,
+    maxDate: '3m',
+    onSelect: function(selected) {
+      $('#end_date').datepicker("option", "minDate", selected);
+      $('#end_date').attr("disabled", false);
+    }
+  });
+
+  $('#end_date').datepicker({
+    dateFormat: 'dd-mm-yy',
+    minDate: 0,
+    maxDate: '3m',
+    onSelect: function(selected) {
+      $('#start_date').datepicker("option", "maxDate", selected);
+    }
+  });
+</script>
 
 
 <br/><hr/><br/>
@@ -33,7 +80,7 @@
   <div class="parallax"></div>
 
   <!-- <div style="height:1000px;background-color:#ee785a;font-size:30px"> -->
-  Discover entire homes and private rooms perfect for any trip. From fresh-pressed sheets to tips on where to get the best brunch, our hosts are full of local hospitality.
+
   </div>
 
   <div class="parallax"></div>

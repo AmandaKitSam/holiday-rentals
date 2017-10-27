@@ -4,7 +4,6 @@
     <div class="row">
       <br/>
       <div class="collapse" id="collapsePanel">
-
         <%= search_form_for @search, url: search_path do |f| %>
 
           <div class="row">
@@ -84,14 +83,42 @@
               <%= check_box_tag "q[is_air_eq]", true %> Air Conditioning
             </div>
           </div>
+          <hr/>
 
+          <div class="row text-center">
+            <%= f.submit "Search", class: "btn btn-form" %>
+          </div>
+          
         <% end %>
 
       </div>
     </div>
   </div>
 
+
   <div id="right">
     <!-- Google Map -->
   </div>
 </div>
+
+
+<script>
+  $('#start_date').datepicker({
+    dateFormat: 'dd-mm-yy',
+    minDate: 0,
+    maxDate: '3m',
+    onSelect: function(selected) {
+      $('#end_date').datepicker("option", "minDate", selected);
+      $('#end_date').attr("disabled", false);
+    }
+  });
+
+  $('#end_date').datepicker({
+    dateFormat: 'dd-mm-yy',
+    minDate: 0,
+    maxDate: '3m',
+    onSelect: function(selected) {
+      $('#start_date').datepicker("option", "maxDate", selected);
+    }
+  });
+</script>

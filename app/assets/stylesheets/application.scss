@@ -294,7 +294,7 @@ body, html {
 }
 
 
-/* ------------- Rooms - Show Page ------------- */
+/* ------------- Rooms - Show Page + Carousel ------------- */
 .amenities li {
   margin-bottom: 10px;
   font-size: 16px;
@@ -306,6 +306,9 @@ body, html {
   color: rgba(0,0,0,0.5);
 }
 
+.carousel-inner img {
+  margin: 0 auto;
+}
 
 /* -------------- Reservation - Form -------------- */
 .reservation-table td {

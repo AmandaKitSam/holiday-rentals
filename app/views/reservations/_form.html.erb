@@ -65,7 +65,7 @@ function checkDate(date) {
           // console.log(arrValue);
           for(var d = new Date(arrValue.start_date); d <= new Date(arrValue.end_date); d.setDate(d.getDate() + 1)) {
             // console.log(d);
-            unavailableDates.push($datepicker.formatDate('d-m-yy', d));
+            unavailableDates.push($.datepicker.formatDate('d-m-yy', d));
           }
         });
 

@@ -2,14 +2,14 @@
   <div id="left">
     <!-- Search Panel -->
     <div class="row">
-      <div class="col-md-offset-4 col-md-4">
-        <button id="filter" class="btn btn-default" data-toggle="collapse" data-target="#collapsePanel">
-          More filters <i class="fa fa-chevron-down"></i>
+      <div class="col-md-12">
+        <button id="filter" class="btn btn-normal btn-block" data-toggle="collapse" data-target="#collapsePanel">
+          Advanced Search <i class="fa fa-chevron-down"></i>
         </button>
       </div>
     </div>
 
-
+    <!-- The Advanced Search -->
     <div class="row">
       <br/>
       <div class="collapse" id="collapsePanel">
@@ -146,4 +146,34 @@
       $('#start_date').datepicker("option", "maxDate", selected);
     }
   });
+
+  var open = true;
+
+  $('#filter').click(function() {
+    if (open) {
+      $('#filter').html("Advanced Search <i class='fa fa-chevron-up'></i>");
+    } else {
+      $('#filter').html("Advanced Search <i class='fa fa-chevron-down'></i>");
+    }
+    open = !open;
+  });
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- END -->

@@ -149,8 +149,10 @@
           });
 
           inforwindow = new google.maps.InfoWindow({
-            content: "<div class='map_price'>$" + room.price + "</div>"
+            content: "<div class='map_price'>$" + <%= room.price %> + "</div>"
           });
+
+          inforwindow.open(map, marker);
         <% end %>
       }
 

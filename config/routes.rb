@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   # From reservations_controller def your_trips, your_reservations:
   get '/your_trips' => 'reservations#your_trips'
   get '/your_reservations' => 'reservations#your_reservations'
+
+  get 'search' => 'pages#search'
 end

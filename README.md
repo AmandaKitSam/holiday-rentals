@@ -32,7 +32,7 @@
 
 - Step 5: Users can manage their listings. You can update your rooms.
 
-- Step 6: Users can also see a list of their rooms at the profile page.
+- Step 6: Users can view a list of their rooms at the listing page and the user's profile page.
 
 ## Models:
 

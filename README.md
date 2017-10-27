@@ -22,13 +22,17 @@
 
 - Find your ideal accommodation for your next trip:
 
-- Users can sign up and create their User Profile page on the website.
+- Step 1: Users can sign up and create their User Profile page on the website.
 
-- User's photo is connected with Gravatar. If the user has uploaded photo with Gravatar, user's photo will automatically appear at the nav bar next to user's name and email after user has logged in. (Otherwise, it will appear as numbers.)
+- Step 2: User's photo is connected with Gravatar. If the user has uploaded photo with Gravatar, user's photo will automatically appear at the nav bar next to user's name and email after user has logged in. (Otherwise, it will appear as numbers.)
 
-- Users can create rooms at 'Holiday Rentals' within their accounts, and they can add photos, listing details, price(per/night), description, amenities & location for their rooms.
+- Step 3: Users can create rooms by clicking 'List Your Place' after sign up/sign in. You can add photos, listing details, price(per/night), description, amenities & location for the room.
 
-- Once the room is ready for rent, other users can search for the room and make reservations. (It's a mock up school project of holiday rentals websites.)
+- Step 4: Once the room is ready for rent, it will be saved in the database. Other users can search for the room and make reservations.
+
+- Step 5: Users can manage their listings. You can update your rooms.
+
+- Step 6: Users can also see a list of their rooms at the profile page.
 
 ## Models:
 

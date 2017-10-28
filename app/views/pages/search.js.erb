@@ -1,0 +1,2 @@
+// when search - no need to reload the whole page, just the #room_listing
+$('#room_listing').html('<%= j render partial: "rooms/rooms_list", locals: {rooms: @arrRooms} %>')

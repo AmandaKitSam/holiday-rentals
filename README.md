@@ -30,7 +30,7 @@
 
 - Step 4: Once the room is ready for rent, it will be saved in the database. Other users can search for the room and make reservations.
 
-- Step 5: Users can manage their listings. You can update your rooms.
+- Step 5: Users can manage their listings and update their rooms.
 
 - Step 6: Users can view a list of their rooms at the listing page and the user's profile page.
 
@@ -48,5 +48,3 @@
 
 Please visit the website:
 https://holiday-rentals.herokuapp.com/
-
---- Project is at the working stage ---

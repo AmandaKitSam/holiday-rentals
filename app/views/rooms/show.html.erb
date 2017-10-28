@@ -155,10 +155,10 @@
 
     <!-- Near By Rooms -->
     <div class="row">
-      <h3>Near By Homes For Rent</h3>
       <!-- from geocoder - nearby 10 km -->
-      <%= nearbys = @room.nearbys(10) %>
+      <% nearbys = @room.nearbys(10) %>
       <% unless nearbys.nil? %>
+        <h3>Near By Homes For Rent</h3>
         <% for room in nearbys %>
           <div class="col-md-4">
             <div class="panel panel-default">

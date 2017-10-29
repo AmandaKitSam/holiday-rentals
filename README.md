@@ -12,11 +12,13 @@
 
 * Database: PostgreSQL
 
+* Storage: Amazon Web Services - Amazon S3
+
 * API: Google Map API
 
 * Gravatar feature added
 
-* Gemfile: gem 'toastr-rails' (To make the notification appear nice)
+* Gemfile: gem 'toastr-rails'
 
 ## About the Project:
 

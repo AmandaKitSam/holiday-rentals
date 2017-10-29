@@ -18,7 +18,7 @@
 
 * Gravatar feature added
 
-* Gemfile: gem 'toastr-rails'
+* Gemfile: gem 'toastr-rails' and more
 
 ## About the Project:
 

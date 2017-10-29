@@ -89,4 +89,19 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   config.assets.compile = true
+
+  # After heroku - Amazon S3
+  config.action_mailer.default_url_options = { host: 'holiday-rentals.herokuapp.com/' }
+
+  config.paperclip_defaults = {
+    storage: :s3,
+    path: ':class/:attachment/:id/:style/:filename',
+    s3_host_name: 's3-ap-southeast-2.amazonaws.com',
+    s3_credentials: {
+      bucket: 'holiday-rentals',
+      access_key_id: ENV["AWS_ACCESS_KEY_ID"],
+      secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
+      s3_region: 'ap-southeast-2'
+    }
+  }
 end

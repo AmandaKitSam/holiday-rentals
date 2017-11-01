@@ -18,8 +18,6 @@
 
 * Gravatar feature added
 
-* Gemfile: gem 'toastr-rails' and more
-
 ## About the Project:
 
 - User and sessions functions | User authentication and validation before reservations
@@ -36,7 +34,7 @@
 
 - Reservation of the room can be instant booking | request booking<br/>
 Instant booking: user can book the room immediately;<br/>
-Request booking: user need to wait for approval from the host.
+Request booking: user need to wait for approval from the host. The host can choose to approve or decline.
 
 - Step 4: The hosts can manage their listings and update their rooms.
 

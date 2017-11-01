@@ -1,6 +1,9 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <span><i class="fa fa-usd" style="color: #ffb400"></i> <%= @room.price %></span>
+    <span>
+      <% if @room.Instant? %><i class="fa fa-bolt" style="color: #efefef"></i><% end %>
+      <i class="fa fa-usd" style="color: #ffb400"></i> <%= @room.price %>
+    </span>
     <span class="pull-right">Per Night</span>
   </div>
   <div class="panel-body">
@@ -40,7 +43,13 @@
     </div>
 
       <br/>
-      <%= f.submit "Book Now", id: "btn_book", class: "btn btn-normal btn-block", disabled: true %>
+
+      <% if @room.Instant? %>
+        <%= f.submit "Book Now", id: "btn_book", class: "btn btn-normal btn-block", disabled: true %>
+      <% else %>
+        <%= f.submit "Request Booking", id: "btn_book", class: "btn btn-normal btn-block", disabled: true %>
+      <% end %>
+
     <% end %>
   </div>
 </div>
@@ -101,6 +110,7 @@ function checkDate(date) {
                   $('#preview').show();
                   $('#btn_book').attr('disabled', false);
 
+                  // Do the math for users
                   var total = nights * <%= @room.price %>
                   $('#reservation_nights').text(nights);
                   $('#reservation_total').text(total);

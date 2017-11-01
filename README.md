@@ -24,19 +24,23 @@
 
 - User and sessions functions | User authentication and validation before reservations
 
-- Step 1: Users can sign up and create their User Profile page on the website.
+- Step 1: Users can sign up then create the user profile page before they list their rooms.
 
-- Step 2: User's photo is connected with Gravatar. If the user has uploaded photo with Gravatar, user's photo will automatically appear at the nav bar next to the name and email after user has logged in. (Otherwise, it will appear as numbers.)
+- Plese note: User's photo is connected with Gravatar. If the user has uploaded photo with Gravatar, user's photo will automatically appear at the nav bar next to the name and email after user has logged in. (Otherwise, it will appear as numbers.)
 
-- Step 3: Users can create rooms by clicking 'List Your Place' after sign up/sign in. You can add photos, listing details, price(per/night), description, amenities & location for the room.
+- Step 2: Users can create rooms by clicking 'List Your Place' | 'Become A Host' after sign up/sign in. You can add photos, listing details, price(per/night), description, amenities & location for the room.
 
 - Search function: Room search function is executed through an AJAX request
 
-- Step 4: Once the room is published, it will be saved in the database. Other users can search for the room and make reservations.
+- Step 3: Once the room is published, it will be saved in the database. Other users can search for the room and make reservations.
 
-- Step 5: Users can manage their listings and update their rooms.
+- Reservation of the room can be instant booking | request booking<br/>
+Instant booking: user can book the room immediately;<br/>
+Request booking: user need to wait for approval from the host.
 
-- Step 6: Users can view a list of their rooms at the listing page and the user's profile page.
+- Step 4: The hosts can manage their listings and update their rooms.
+
+- Step 5: The hosts can view a list of their rooms at the listing page and their profile page.
 
 ## Models:
 

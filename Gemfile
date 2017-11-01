@@ -67,3 +67,6 @@ gem 'geocoder', '~> 1.4'
 gem 'jquery-ui-rails'
 
 gem 'ransack', '~> 1.7'
+
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'

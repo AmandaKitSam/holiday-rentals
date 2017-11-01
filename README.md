@@ -22,7 +22,7 @@
 
 ## About the Project:
 
-- Find your ideal accommodation for your next trip:
+- User and sessions functions | User authentication and validation before reservations
 
 - Step 1: Users can sign up and create their User Profile page on the website.
 
@@ -30,7 +30,9 @@
 
 - Step 3: Users can create rooms by clicking 'List Your Place' after sign up/sign in. You can add photos, listing details, price(per/night), description, amenities & location for the room.
 
-- Step 4: Once the room is ready for rent, it will be saved in the database. Other users can search for the room and make reservations.
+- Search function: Room search function is executed through an AJAX request
+
+- Step 4: Once the room is published, it will be saved in the database. Other users can search for the room and make reservations.
 
 - Step 5: Users can manage their listings and update their rooms.
 
@@ -38,13 +40,13 @@
 
 ## Models:
 
-* Users - Authentication with full name, email, password; also added phone number, description and more
+* Users - Authentication with full name, email, password; optional for phone number and description
 
 * Rooms (Associated with Users) - Listing name, summary, address, price(per night), home type, room type, accommodate(integer), bed room(integer), bath room(integer); also added Amenities such as if the room includes TV / kitchen / internet and more
 
 * Photos - (Associated with Rooms) User can add photos for their rooms to promote their places.
 
-* Reservations - (Associated with Rooms & Users) User A can create a room for rent. Other users can make reservation for the room.
+* Reservations - (Associated with Rooms & Users) Users can make reservation for the room of their choice.
 
 -------------------------------------------
 

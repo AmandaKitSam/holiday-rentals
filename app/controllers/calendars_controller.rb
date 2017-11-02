@@ -16,7 +16,7 @@ class CalendarsController < ApplicationController
       end_of_month = (start_date + 1.months).end_of_month # => eg. 31st Aug
 
       # SQL query
-      @events = @room.reservations.join(:user)
+      @events = @room.reservations.joins(:user)
                       .select('reservations.*, users.fullname, users.image, users.email')
                       .where('(start_date BETWEEN ? AND ?) AND status <> ?', first_of_month, end_of_month, 2) # Ignore Declined: 2
     else

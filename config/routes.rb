@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   devise_for :users,
               path: '',
               path_names: {sign_in: 'login', sign_out: 'logout', edit: 'profile', sign_up: 'registration'},
-              controllers: {omniauth_callbacks: 'omniauth_callbacks'}
+              controllers: {omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations'}
 
-  resources :users, only: [:show]
+  resources :users, only: [:show] # Show user information
   resources :rooms, except: [:edit] do
     member do
       get 'listing'
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
       get 'preview'
     end
   resources :photos, only: [:create, :destroy]
-  resources :reservations, only: [:create]
+  resources :reservations, only: [:create] # reservation is linked to room id
   end
 
   # From reservations_controller def your_trips, your_reservations:

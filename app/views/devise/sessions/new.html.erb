@@ -28,6 +28,9 @@
         <%= f.submit "Log in", class: "btn btn-normal btn-block" %>
       </div>
     <% end %>
+    <hr/>
+
+    <%= link_to "Sign In With Facebook", user_facebook_omniauth_authorize_path, class: "btn btn-primary btn-block" %>
 
   </div>
 </div>

@@ -2,13 +2,13 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
   validates :fullname, presence: true, length: {maximum: 50}
 
   # OmniAuth:-Overview
   def self.from_omniauth(auth)
-    user = User.where(email: auto.info.email).first
+    user = User.where(email: auto.info.email).first # Check if the user is in our database
 
     if user
       return user

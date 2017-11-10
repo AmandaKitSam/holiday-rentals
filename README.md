@@ -40,6 +40,8 @@ Request booking: user need to wait for approval from the host. The host can choo
 
 - Step 5: The hosts can view a list of their rooms at the listing page and their profile page.
 
+- Host Calendar: reservations showing on the calendar
+
 ## Models:
 
 * Users - Authentication with full name, email, password; optional for phone number and description

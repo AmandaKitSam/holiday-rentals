@@ -116,7 +116,7 @@ a {
 }
 
 .fc-past {
-  background-color: #d2d2d2;
+  background-color: rgba(#e0e0e0, 0.76);
 }
 
 .fc-day {
@@ -124,7 +124,8 @@ a {
 }
 
 .fc-content {
-  background-color: #ee785a;
+  background-color: #1fd2e4;
+  color: #2b2b2b;
   height: 40px;
   border-radius: 20px;
 }
@@ -139,6 +140,26 @@ a {
   position: relative;
   top: 2px;
   left: 10px;
+}
+
+.circle-booked {
+  width: 20%;
+  padding-bottom: 20%;
+  background-color: #1fd2e4;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  margin: 0 auto;
+}
+
+.circle-waiting {
+  width: 20%;
+  padding-bottom: 20%;
+  background-color: #f25b6d;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  margin: 0 auto;
 }
 
 

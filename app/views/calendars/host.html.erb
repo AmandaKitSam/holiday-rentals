@@ -13,10 +13,20 @@
 
       <%= f.hidden_field :start_date, id: "start-date", value: params[:start_date], onchange: "$(this.form).submit()" %>
     <% end %>
+
+    <div class="col-md-2"></div>
+    <div class="col-md-2">
+      <p class="text-center">Booked: </p><div class="circle-booked"></div>
+    </div>
+    <div class="col-md-2">
+      <p class="text-center">Waiting: </p><div class="circle-waiting"></div>
+    </div>
   </div>
 <% end %>
+<hr/>
 
 <div id="calendar"></div>
+
 
 <script>
   window.reservations = <%= raw @events.to_json %>

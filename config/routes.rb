@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     end
   resources :photos, only: [:create, :destroy]
   resources :reservations, only: [:create] # reservation is linked to room id
+  resources :calendars
   end
 
   # From reservations_controller def your_trips, your_reservations:

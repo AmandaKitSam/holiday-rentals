@@ -17,7 +17,7 @@ class CalendarsController < ApplicationController
 
       # SQL query
       @events = @room.reservations.joins(:user)
-                      .select('reservations.*, users.fullname, users.image, users.email')
+                      .select('reservations.*, users.fullname, users.image, users.email, users.uid')
                       .where('(start_date BETWEEN ? AND ?) AND status <> ?', first_of_month, end_of_month, 2) # Ignore Declined: 2
     else
       @room = nil

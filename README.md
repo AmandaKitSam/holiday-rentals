@@ -52,6 +52,8 @@ Request booking: user need to wait for approval from the host. The host can choo
 
 * Reservations - (Associated with Rooms & Users) Users can make reservation for the room of their choice.
 
+* Calendar
+
 -------------------------------------------
 
 Please visit the website:

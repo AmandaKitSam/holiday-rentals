@@ -24,7 +24,7 @@
 
 - Step 1: Users can sign up then create the user profile page before they list their rooms.
 
-- Plese note: User's photo is connected with Gravatar. If the user has uploaded photo with Gravatar, user's photo will automatically appear at the nav bar next to the name and email after user has logged in. (Otherwise, it will appear as numbers.)
+- Please note: User's photo is connected with Gravatar. If the user has uploaded photo with Gravatar, user's photo will automatically appear at the nav bar next to the name and email after user has logged in. (Otherwise, it will appear as numbers.)
 
 - Step 2: Users can create rooms by clicking 'List Your Place' | 'Become A Host' after sign up/sign in. You can add photos, listing details, price(per/night), description, amenities & location for the room.
 
@@ -40,7 +40,7 @@ Request booking: user need to wait for approval from the host. The host can choo
 
 - Step 5: The hosts can view a list of their rooms at the listing page and their profile page.
 
-- Host Calendar: reservations showing on the calendar
+- Host Calendar: reservations & prices showing on the calendar
 
 ## Models:
 
@@ -52,7 +52,7 @@ Request booking: user need to wait for approval from the host. The host can choo
 
 * Reservations - (Associated with Rooms & Users) Users can make reservation for the room of their choice.
 
-* Calendar - (Associated with Rooms)
+* Calendar - (Associated with Rooms) Calendar Availability Model
 
 -------------------------------------------
 

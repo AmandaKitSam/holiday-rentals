@@ -1,4 +1,4 @@
-# PROJECT - Holiday Rentals
+# PROJECT - Holiday Rentals :house:
 
 ## By Amanda Sam
 
@@ -24,9 +24,9 @@
 
 - Step 1: Users can sign up then create the user profile page before they list their rooms.
 
-- Please note: User's photo is connected with Gravatar. If the user has uploaded photo with Gravatar, user's photo will automatically appear at the nav bar next to the name and email after user has logged in. (Otherwise, it will appear as numbers.)
+- Please note: User's photo is connected with Gravatar. If the user has uploaded photo with Gravatar, user's photo will automatically appear in the account. (Otherwise, it will appear as numbers.)
 
-- Step 2: Users can create rooms by clicking 'List Your Place' | 'Become A Host' after sign up/sign in. You can add photos, listing details, price(per/night), description, amenities & location for the room.
+- Step 2: Users can create rooms by clicking 'List Your Place' | 'Become A Host' after sign up/sign in. You can add photos, listing details, price, description, amenities & location for the room.
 
 - Search function: Room search function is executed through an AJAX request
 
@@ -44,15 +44,15 @@ Request booking: user need to wait for approval from the host. The host can choo
 
 ## Models:
 
-* Users - Authentication with full name, email, password; optional for phone number and description
+* Users :busts_in_silhouette: - Authentication with full name, email, password; optional for phone number and description
 
-* Rooms (Associated with Users) - Listing name, summary, address, price(per night), home type, room type, accommodate(integer), bed room(integer), bath room(integer); also added Amenities such as if the room includes TV / kitchen / internet and more
+* Rooms :house_with_garden: (Associated with Users) - Listing name, summary, address, price(per night), home type, room type, accommodate(integer), bed room(integer), bath room(integer); also added Amenities such as if the room includes TV :tv: / bath :bath: / internet :computer:
 
-* Photos - (Associated with Rooms) User can add photos for their rooms to promote their places.
+* Photos :sunrise: - (Associated with Rooms) User can add photos for their rooms to promote their places.
 
-* Reservations - (Associated with Rooms & Users) Users can make reservation for the room of their choice.
+* Reservations :book: - (Associated with Rooms & Users) Users can make reservation for the room of their choice.
 
-* Calendar - (Associated with Rooms) Calendar Availability Model
+* Calendar :calendar: - (Associated with Rooms) Calendar Availability Model
 
 -------------------------------------------
 
